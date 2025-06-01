@@ -32,6 +32,8 @@ def create_app(config_name, config_path=None):
     # 注册数据库连接
     db.app = app
     db.init_app(app)
+    # with app.app_context():
+    #     db.create_all()
 
     # 注册缓存连接
     cache.init_app(app, config=app.config['CACHE_CONFIG'])

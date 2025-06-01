@@ -5,7 +5,7 @@ from . import base
 class Account(db.Model, base.BaseModel):
     __tablename__ = 'usr_account'
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.BigInteger, primary_key=True)
     account = db.Column(db.String(64), default='')
     password = db.Column(db.String(255), default='')
     nickname = db.Column(db.String(64), default='')

@@ -9,7 +9,7 @@ class Category(db.Model, base.BaseModel):
     category = db.Column(db.String(32))
     image = db.Column(db.Text)
     book_cnt = db.Column(db.Integer)
-    code = db.Column(db.String(32))
+    code = db.Column(db.Integer)
 
     def __repr__(self):
         return self.category

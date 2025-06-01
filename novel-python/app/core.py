@@ -87,6 +87,7 @@ def make_response(actual_do):
     def wrapper(*args, **kwargs):
         try:
             client_ip = util.get_clientip(request)
+            # print(client_ip)
             aid = 0
             if request.method == 'GET':
                 data = request.args
